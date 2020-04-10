@@ -4,6 +4,7 @@
   "description": "JavaScript Action Template",
   "main": "index.js",
   "scripts": {
+    "start": "node --icu-data-dir=node_modules\\full-icu index.js",
     "lint": "eslint index.js",
     "package": "ncc build index.js -o dist",
     "test": "eslint index.js && jest"
@@ -25,8 +26,8 @@
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
     "@actions/core": "^1.1.1",
-    "moment": "^2.24.0",
-    "moment-timezone": "^0.5.28"
+    "full-icu": "^1.3.1",
+    "luxon": "^1.23.0"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",
