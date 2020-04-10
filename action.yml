@@ -1,8 +1,12 @@
 name: 'Thai Current Time'
+author: "PluZ85 <geruby85@gmail.com>"
 description: 'Get current time in Thai Language and Timezone'
+branding:
+  icon: watch
+  color: yellow
 outputs:
   thaiTime: # output will be available to future steps
-    description: 'Date and Time in Thai language'
+    description: 'Date and Time (Asia/Bangkok) in Thai language '
 runs:
   using: 'node12'
   main: 'dist/index.js'
