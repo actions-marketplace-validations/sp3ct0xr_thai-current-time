@@ -14,5 +14,4 @@ function run() {
     core.setFailed(error.message);
   }
 }
-moment().locale('th');
 run();
