@@ -58,8 +58,8 @@ const {DateTime} = __webpack_require__(317);
 
 function run() {
   try {
-    let th_format = 'dd LLL yy เวลา HH:mm';
-    let t_time = DateTime.local().plus({ years: 543 }).setZone('Asia/Bangkok').toFormat(th_format,{ locale: 'th', numberingSystem: 'thai'});
+    let th_format = 'EEE dd MMM yy เวลา HH:mm';
+    let t_time = DateTime.local().plus({ years: 543 }).setZone('Asia/Bangkok').toFormat(th_format);
     core.setOutput('thaiTime', t_time);
   } 
   catch (error) {
@@ -563,8 +563,8 @@ function stringify(obj) {
  */
 
 
-const monthsLong = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-const monthsShort = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+const monthsLong = ['มกราคม', 'กุมภาพันธ์', 'มีนาคม', 'เมษายน', 'พฤษภาคม', 'มิถุนายน', 'กรกฎาคม', 'สิงหาคม', 'กันยายน', 'ตุลาคม', 'พฤศจิกายน', 'ธันวาคม'];
+const monthsShort = ['ม.ค.', 'ก.พ.', 'มี.ค.', 'เม.ย.', 'พ.ค.', 'มิ.ย.', 'ก.ค.', 'ส.ค.', 'ก.ย.', 'ต.ค.', 'พ.ย.', 'ธ.ค.'];
 const monthsNarrow = ["J", "F", "M", "A", "M", "J", "J", "A", "S", "O", "N", "D"];
 function months(length) {
   switch (length) {
@@ -587,8 +587,8 @@ function months(length) {
       return null;
   }
 }
-const weekdaysLong = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
-const weekdaysShort = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+const weekdaysLong = ['จันทร์', 'อังคาร', 'พุธ', 'พฤหัส', 'ศุกร์', 'เสาร์', 'อาทิตย์'];
+const weekdaysShort = ['จ.', 'อ.', 'พ.', 'พฤ.', 'ศ.', 'ส.', 'อา.'];
 const weekdaysNarrow = ["M", "T", "W", "T", "F", "S", "S"];
 function weekdays(length) {
   switch (length) {
