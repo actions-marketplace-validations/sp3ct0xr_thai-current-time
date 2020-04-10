@@ -16,7 +16,7 @@ Example : `จ. 11 เม.ย. 63 เวลา 02:06` ✨
 ```yaml
 steps:
 - name: Get Thai Current Time
-  uses: pluz85/thai-current-time@master
+  uses: pluz85/thai-current-time@1.0
   id: thai-current-time
 - name: Get Time
   env:
