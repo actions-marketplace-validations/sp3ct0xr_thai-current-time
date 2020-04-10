@@ -1,22 +1,18 @@
 const core = require('@actions/core');
-const wait = require('./wait');
+const moment = require('moment');
+const timezone = require('moment-timezone');
 
 
-// most @actions toolkit packages have async methods
-async function run() {
-  try { 
-    const ms = core.getInput('milliseconds');
-    console.log(`Waiting ${ms} milliseconds ...`)
-
-    core.debug((new Date()).toTimeString())
-    await wait(parseInt(ms));
-    core.debug((new Date()).toTimeString())
-
-    core.setOutput('time', new Date().toTimeString());
+function run() {
+  moment.locale('th');
+  let th_format = 'DD MMM YY เวลา HH:mm';
+  let th_zone = timezone.tz('Asia/Bangkok').add(543, 'years');
+  try {
+    core.setOutput('thaiTime', th_zone.format(th_format));
   } 
   catch (error) {
     core.setFailed(error.message);
   }
 }
-
-run()
+moment().locale('th');
+run();

@@ -1,13 +1,8 @@
-name: 'Wait'
-description: 'Wait a designated number of milliseconds'
-inputs:
-  milliseconds:  # id of input
-    description: 'number of milliseconds to wait'
-    required: true
-    default: '1000'
+name: 'Thai Current Time'
+description: 'Get current time in Thai Language and Timezone'
 outputs:
-  time: # output will be available to future steps 
-    description: 'The message to output'
+  thaiTime: # output will be available to future steps
+    description: 'Date and Time in Thai language'
 runs:
   using: 'node12'
   main: 'dist/index.js'

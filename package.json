@@ -24,7 +24,9 @@
   },
   "homepage": "https://github.com/actions/javascript-action#readme",
   "dependencies": {
-    "@actions/core": "^1.1.1"
+    "@actions/core": "^1.1.1",
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.28"
   },
   "devDependencies": {
     "@zeit/ncc": "^0.20.5",
