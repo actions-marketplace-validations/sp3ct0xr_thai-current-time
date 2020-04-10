@@ -26,4 +26,4 @@ jobs:
         id: thai-current-time
       # Use the output from the `hello` step
       - name: Get the output Time
-        run: echo "The time was ${{ steps.thai-current-time.outputs.thaiTime }}"
+        run: echo "ทดสอบ ณ ${{ steps.thai-current-time.outputs.thaiTime }}"
