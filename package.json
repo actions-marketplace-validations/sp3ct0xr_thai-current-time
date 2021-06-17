@@ -30,8 +30,8 @@
     "luxon": "^1.23.0"
   },
   "devDependencies": {
-    "@zeit/ncc": "^0.20.5",
-    "eslint": "^6.3.0",
-    "jest": "^25.3.0"
+    "@zeit/ncc": "^0.22.3",
+    "eslint": "^7.28.0",
+    "jest": "^27.0.4"
   }
 }
